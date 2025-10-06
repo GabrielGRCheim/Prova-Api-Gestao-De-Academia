@@ -45,7 +45,7 @@ Password: (vazio)
 
 ---
 
-##📚 Documentação da API (Swagger)
+## 📚 Documentação da API (Swagger)
 
 Após iniciar o projeto, acesse o Swagger em: http://localhost:8080/swagger-ui/index.html
 
@@ -53,7 +53,7 @@ Lá é possível testar todos os endpoints, enviar requisições e visualizar re
 
 ---
 
-##🔗 Endpoints Principais
+## 🔗 Endpoints Principais
 👨‍🎓 Alunos
 
 Base: /api/v1/alunos
@@ -65,3 +65,67 @@ Base: /api/v1/alunos
 | `PATCH` | `/api/v1/alunos/{id}/inativar`   | Inativar aluno             |
 | `PATCH` | `/api/v1/alunos/{id}/ativar`     | Reativar aluno             |
 | `POST`  | `/api/v1/alunos/vincular-treino` | Vincular aluno a um treino |
+
+## 💪 Treinos
+
+Base: /api/v1/treinos
+| Método   | Endpoint               | Descrição         |
+| -------- | ---------------------- | ----------------- |
+| `POST`   | `/api/v1/treinos`      | Criar novo treino |
+| `GET`    | `/api/v1/treinos`      | Listar treinos    |
+| `PUT`    | `/api/v1/treinos/{id}` | Atualizar treino  |
+| `DELETE` | `/api/v1/treinos/{id}` | Remover treino    |
+
+
+## 📋 Planos
+
+Base: /api/v1/planos
+| Método   | Endpoint              | Descrição       |
+| -------- | --------------------- | --------------- |
+| `POST`   | `/api/v1/planos`      | Criar plano     |
+| `GET`    | `/api/v1/planos`      | Listar planos   |
+| `PUT`    | `/api/v1/planos/{id}` | Atualizar plano |
+| `DELETE` | `/api/v1/planos/{id}` | Excluir plano   |
+
+## 💰 Pagamentos
+
+Base: /api/v1/pagamentos
+| Método | Endpoint                             | Descrição                      |
+| ------ | ------------------------------------ | ------------------------------ |
+| `POST` | `/api/v1/pagamentos/{alunoId}`                 | Gerar pagamento                |
+| `GET`  | `/api/v1/pagamentos/aluno/{alunoId}` | Listar pagamentos de um aluno  |
+| `POST` | `/api/v1/pagamentos/atraso/{id}`     | Marcar pagamento como atrasado |
+
+---
+
+## 🧠 Estrutura de Relacionamentos
+
+Um Aluno está vinculado a um Plano e um Treino.
+
+Um Plano pode estar associado a vários Alunos.
+
+Um Treino pode ter vários Alunos vinculados.
+
+Cada Aluno pode gerar Pagamentos com base no plano ativo.
+
+---
+
+## 📦 Retornos HTTP
+
+O sistema segue boas práticas de status HTTP:
+| Código            | Situação                                   |
+| ----------------- | ------------------------------------------ |
+| `201 Created`     | Recurso criado com sucesso                 |
+| `200 OK`          | Requisição bem-sucedida                    |
+| `204 No Content`  | Recurso excluído ou atualizado sem retorno |
+| `400 Bad Request` | Dados inválidos                            |
+| `404 Not Found`   | Recurso não encontrado                     |
+| `409 Conflict`    | Conflito (ex: CPF já cadastrado)           |
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por Gabriel Gomes Rodrigues Cheim
+📧 (gabrielgrcheim2@gmail.com)
+💻 Projeto feito para estudos e prática com Spring Boot e H2 Database.
