@@ -129,3 +129,10 @@ O sistema segue boas práticas de status HTTP:
 Desenvolvido por Gabriel Gomes Rodrigues Cheim
 📧 (gabrielgrcheim2@gmail.com)
 💻 Projeto feito para estudos e prática com Spring Boot e H2 Database.
+
+
+---
+
+
+Documentação Swagger:
+<img width="1474" height="633" alt="image" src="https://github.com/user-attachments/assets/b4e9521e-f024-4545-94ef-b64277c27435" />
