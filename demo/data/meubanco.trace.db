@@ -1,0 +1,636 @@
+2025-10-06 11:48:09.002143-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TB_TREINOS" not found; SQL statement:
+select t1_0.id,t1_0.descricao,t1_0.nivel,t1_0.nome from tb_treinos t1_0 [42102-232]
+2025-10-06 11:52:36.982616-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TB_TREINOS" not found; SQL statement:
+select t1_0.id,t1_0.descricao,t1_0.nivel,t1_0.nome from tb_treinos t1_0 [42102-232]
+2025-10-06 11:52:47.459076-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TB_TREINOS" not found; SQL statement:
+select t1_0.id,t1_0.descricao,t1_0.nivel,t1_0.nome from tb_treinos t1_0 [42102-232]
+2025-10-06 11:53:21.130417-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Sequence "TB_TREINOS_SEQ" not found; SQL statement:
+select next value for tb_treinos_seq [90036-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readSequence(Parser.java:8018)
+	at org.h2.command.Parser.readTermWithIdentifier(Parser.java:5278)
+	at org.h2.command.Parser.readTermWithIdentifier(Parser.java:5148)
+	at org.h2.command.Parser.readTerm(Parser.java:4828)
+	at org.h2.command.Parser.readFactor(Parser.java:3323)
+	at org.h2.command.Parser.readSum(Parser.java:3310)
+	at org.h2.command.Parser.readConcat(Parser.java:3275)
+	at org.h2.command.Parser.readCondition(Parser.java:3065)
+	at org.h2.command.Parser.readExpression(Parser.java:2985)
+	at org.h2.command.Parser.parseSelectExpressions(Parser.java:2785)
+	at org.h2.command.Parser.parseSelect(Parser.java:2803)
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2692)
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2547)
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2526)
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2519)
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2512)
+	at org.h2.command.Parser.parseQuery(Parser.java:2479)
+	at org.h2.command.Parser.parsePrepared(Parser.java:610)
+	at org.h2.command.Parser.parse(Parser.java:581)
+	at org.h2.command.Parser.parse(Parser.java:556)
+	at org.h2.command.Parser.prepareCommand(Parser.java:484)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:328)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$1.doPrepare(StatementPreparerImpl.java:96)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:180)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareStatement(StatementPreparerImpl.java:81)
+	at org.hibernate.id.enhanced.SequenceStructure$1.getNextValue(SequenceStructure.java:100)
+	at org.hibernate.id.enhanced.PooledOptimizer.generate(PooledOptimizer.java:76)
+	at org.hibernate.id.enhanced.SequenceStyleGenerator.generate(SequenceStyleGenerator.java:585)
+	at org.hibernate.id.IdentifierGenerator.generate(IdentifierGenerator.java:135)
+	at org.hibernate.event.internal.AbstractSaveEventListener.generateId(AbstractSaveEventListener.java:156)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:126)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:177)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:95)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy4/jdk.proxy4.$Proxy133.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320)
+	at jdk.proxy4/jdk.proxy4.$Proxy133.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:654)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy141.save(Unknown Source)
+	at senai.gabriel.demo.service.TreinoService.criarTreino(TreinoService.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at senai.gabriel.demo.service.TreinoService$$SpringCGLIB$$0.criarTreino(<generated>)
+	at senai.gabriel.demo.controller.TreinoController.criarTreino(TreinoController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-10-06 11:55:25.459159-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TB_TREINOS" not found; SQL statement:
+select t1_0.id,t1_0.descricao,t1_0.nivel,t1_0.nome from tb_treinos t1_0 [42102-232]
+2025-10-06 11:55:49.972707-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Sequence "TB_TREINOS_SEQ" not found; SQL statement:
+select next value for tb_treinos_seq [90036-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readSequence(Parser.java:8018)
+	at org.h2.command.Parser.readTermWithIdentifier(Parser.java:5278)
+	at org.h2.command.Parser.readTermWithIdentifier(Parser.java:5148)
+	at org.h2.command.Parser.readTerm(Parser.java:4828)
+	at org.h2.command.Parser.readFactor(Parser.java:3323)
+	at org.h2.command.Parser.readSum(Parser.java:3310)
+	at org.h2.command.Parser.readConcat(Parser.java:3275)
+	at org.h2.command.Parser.readCondition(Parser.java:3065)
+	at org.h2.command.Parser.readExpression(Parser.java:2985)
+	at org.h2.command.Parser.parseSelectExpressions(Parser.java:2785)
+	at org.h2.command.Parser.parseSelect(Parser.java:2803)
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2692)
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2547)
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2526)
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2519)
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2512)
+	at org.h2.command.Parser.parseQuery(Parser.java:2479)
+	at org.h2.command.Parser.parsePrepared(Parser.java:610)
+	at org.h2.command.Parser.parse(Parser.java:581)
+	at org.h2.command.Parser.parse(Parser.java:556)
+	at org.h2.command.Parser.prepareCommand(Parser.java:484)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:328)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$1.doPrepare(StatementPreparerImpl.java:96)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:180)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareStatement(StatementPreparerImpl.java:81)
+	at org.hibernate.id.enhanced.SequenceStructure$1.getNextValue(SequenceStructure.java:100)
+	at org.hibernate.id.enhanced.PooledOptimizer.generate(PooledOptimizer.java:76)
+	at org.hibernate.id.enhanced.SequenceStyleGenerator.generate(SequenceStyleGenerator.java:585)
+	at org.hibernate.id.IdentifierGenerator.generate(IdentifierGenerator.java:135)
+	at org.hibernate.event.internal.AbstractSaveEventListener.generateId(AbstractSaveEventListener.java:156)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:126)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:177)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:95)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy4/jdk.proxy4.$Proxy133.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320)
+	at jdk.proxy4/jdk.proxy4.$Proxy133.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:654)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy141.save(Unknown Source)
+	at senai.gabriel.demo.service.TreinoService.criarTreino(TreinoService.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at senai.gabriel.demo.service.TreinoService$$SpringCGLIB$$0.criarTreino(<generated>)
+	at senai.gabriel.demo.controller.TreinoController.criarTreino(TreinoController.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-10-06 12:19:53.467975-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:19:53.471973-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:19:53.473479-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:19:53.475486-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:20:38.229921-03:00 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:20:38.230921-03:00 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:20:38.231924-03:00 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:20:38.234443-03:00 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:21:07.851621-03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:21:07.852620-03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:21:07.854133-03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:21:07.857141-03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:21:54.851973-03:00 jdbc[44]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:21:54.853481-03:00 jdbc[44]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:21:54.856492-03:00 jdbc[44]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:21:54.858490-03:00 jdbc[44]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:23:05.835043-03:00 jdbc[54]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:23:05.836055-03:00 jdbc[54]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:23:05.839050-03:00 jdbc[54]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:23:05.841049-03:00 jdbc[54]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:23:51.653582-03:00 jdbc[64]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:23:51.654592-03:00 jdbc[64]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:23:51.655590-03:00 jdbc[64]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:23:51.657588-03:00 jdbc[64]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:24:11.039157-03:00 jdbc[74]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:24:11.040158-03:00 jdbc[74]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:24:11.042158-03:00 jdbc[74]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:24:11.044677-03:00 jdbc[74]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:24:34.546757-03:00 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:24:34.547755-03:00 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:24:34.548756-03:00 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:24:34.551764-03:00 jdbc[84]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:18.709452-03:00 jdbc[94]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:18.711452-03:00 jdbc[94]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:18.824207-03:00 jdbc[94]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:18.838746-03:00 jdbc[94]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:21.200809-03:00 jdbc[98]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:21.201809-03:00 jdbc[98]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:21.202809-03:00 jdbc[98]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:21.204312-03:00 jdbc[98]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:34.089607-03:00 jdbc[101]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:34.119168-03:00 jdbc[101]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:34.122171-03:00 jdbc[101]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:25:34.124686-03:00 jdbc[101]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:31:15.558675-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:31:15.563676-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nivel varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:31:15.565985-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 12:31:15.567977-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:51:03.563783-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:51:03.579346-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:51:03.581467-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:51:03.583469-03:00 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:52:08.289125-03:00 jdbc[25]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:52:08.290635-03:00 jdbc[25]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:52:08.291643-03:00 jdbc[25]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:52:08.293649-03:00 jdbc[25]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:55:16.758382-03:00 jdbc[36]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:55:16.761907-03:00 jdbc[36]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:55:16.763915-03:00 jdbc[36]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:55:16.765916-03:00 jdbc[36]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:57:03.392628-03:00 jdbc[47]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:57:03.393630-03:00 jdbc[47]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:57:03.394627-03:00 jdbc[47]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:57:03.395627-03:00 jdbc[47]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:58:42.042219-03:00 jdbc[57]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:58:42.043217-03:00 jdbc[57]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:58:42.047218-03:00 jdbc[57]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:58:42.048220-03:00 jdbc[57]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:59:22.857723-03:00 jdbc[67]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:59:22.858720-03:00 jdbc[67]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:59:22.860227-03:00 jdbc[67]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 13:59:22.862240-03:00 jdbc[67]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:00:02.122589-03:00 jdbc[77]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:00:02.123589-03:00 jdbc[77]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:00:02.124590-03:00 jdbc[77]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:00:02.125590-03:00 jdbc[77]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:02:01.856832-03:00 jdbc[87]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:02:01.857832-03:00 jdbc[87]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:02:01.860343-03:00 jdbc[87]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:02:01.861352-03:00 jdbc[87]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:52:15.760011-03:00 jdbc[112]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:52:15.761012-03:00 jdbc[112]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:52:15.762015-03:00 jdbc[112]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:52:15.764014-03:00 jdbc[112]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:52:21.762125-03:00 jdbc[122]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:52:21.763633-03:00 jdbc[122]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:52:21.764642-03:00 jdbc[122]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:52:21.765644-03:00 jdbc[122]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:55:57.498729-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:55:57.502726-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:55:57.503729-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:55:57.504729-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:56:33.984611-03:00 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:56:33.991612-03:00 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:56:33.993614-03:00 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:56:33.994611-03:00 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:58:11.826629-03:00 jdbc[33]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:58:11.828629-03:00 jdbc[33]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:58:11.830630-03:00 jdbc[33]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:58:11.832628-03:00 jdbc[33]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:58:22.004795-03:00 jdbc[43]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:58:22.006793-03:00 jdbc[43]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:58:22.008792-03:00 jdbc[43]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 14:58:22.009796-03:00 jdbc[43]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 15:19:02.129491-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 15:19:02.133479-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 15:19:02.134478-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 15:19:02.136480-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 15:22:35.944632-03:00 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PLANO" already exists; SQL statement:
+create global temporary table HTE_tb_plano(rn_ integer not null, id bigint, valor_mensal float(53), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 15:22:35.946633-03:00 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_TREINOS" already exists; SQL statement:
+create global temporary table HTE_tb_treinos(rn_ integer not null, id bigint, descricao varchar(255), nome varchar(255), nivel enum ('AVANCADO','INICIANTE','INTERMEDIARIO'), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 15:22:35.947632-03:00 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_ALUNO" already exists; SQL statement:
+create global temporary table HTE_tb_aluno(ativo boolean, data_nascimento date, rn_ integer not null, id bigint, plano_id bigint, cpf varchar(255), nome varchar(255), primary key (rn_)) TRANSACTIONAL [42101-232]
+2025-10-06 15:22:35.949635-03:00 jdbc[23]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HTE_TB_PAGAMENTOS" already exists; SQL statement:
+create global temporary table HTE_tb_pagamentos(data_pagemento date, rn_ integer not null, aluno_id bigint, id bigint, valor_pago float(53), status varchar(255), forma_pagamento enum ('CARTAO','DINHEIRO','PIX'), primary key (rn_)) TRANSACTIONAL [42101-232]
